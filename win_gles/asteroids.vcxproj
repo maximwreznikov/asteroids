@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="GlesDebug|Win32">
+      <Configuration>GlesDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GlesRelease|Win32">
+      <Configuration>GlesRelease</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\asteroids\BehaviorComponent.h" />
+    <ClInclude Include="..\asteroids\BulletRenderer.h" />
+    <ClInclude Include="..\asteroids\Colliders.h" />
+    <ClInclude Include="..\asteroids\Collision.h" />
+    <ClInclude Include="..\asteroids\Engine.h" />
+    <ClInclude Include="..\asteroids\EngineManager.h" />
+    <ClInclude Include="..\asteroids\Entity.h" />
+    <ClInclude Include="..\asteroids\EntityComponent.h" />
+    <ClInclude Include="..\asteroids\EventManager.h" />
+    <ClInclude Include="..\asteroids\Game.h" />
+    <ClInclude Include="..\asteroids\GLShaders.h" />
+    <ClInclude Include="..\asteroids\Logger.h" />
+    <ClInclude Include="..\asteroids\Math.h" />
+    <ClInclude Include="..\asteroids\ObjectGenerator.h" />
+    <ClInclude Include="..\asteroids\Pairs.h" />
+    <ClInclude Include="..\asteroids\PhysicComponent.h" />
+    <ClInclude Include="..\asteroids\Physics.h" />
+    <ClInclude Include="..\asteroids\PhysicsManager.h" />
+    <ClInclude Include="..\asteroids\PolygonRenderer.h" />
+    <ClInclude Include="..\asteroids\RendererComponent.h" />
+    <ClInclude Include="..\asteroids\RenderManager.h" />
+    <ClInclude Include="..\asteroids\shaders.h" />
+    <ClInclude Include="..\asteroids\ShellRenderer.h" />
+    <ClInclude Include="..\asteroids\Transformation.h" />
+    <ClInclude Include="gl_code.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\asteroids\BehaviorComponent.cpp" />
+    <ClCompile Include="..\asteroids\BulletRenderer.cpp" />
+    <ClCompile Include="..\asteroids\Colliders.cpp" />
+    <ClCompile Include="..\asteroids\Collision.cpp" />
+    <ClCompile Include="..\asteroids\Engine.cpp" />
+    <ClCompile Include="..\asteroids\Entity.cpp" />
+    <ClCompile Include="..\asteroids\EntityComponent.cpp" />
+    <ClCompile Include="..\asteroids\EventManager.cpp" />
+    <ClCompile Include="..\asteroids\Game.cpp" />
+    <ClCompile Include="..\asteroids\GLShaders.cpp" />
+    <ClCompile Include="..\asteroids\Logger.cpp" />
+    <ClCompile Include="..\asteroids\Math.cpp" />
+    <ClCompile Include="..\asteroids\ObjectGenerator.cpp" />
+    <ClCompile Include="..\asteroids\Pairs.cpp" />
+    <ClCompile Include="..\asteroids\PhysicComponent.cpp" />
+    <ClCompile Include="..\asteroids\Physics.cpp" />
+    <ClCompile Include="..\asteroids\PhysicsManager.cpp" />
+    <ClCompile Include="..\asteroids\PolygonRenderer.cpp" />
+    <ClCompile Include="..\asteroids\RendererComponent.cpp" />
+    <ClCompile Include="..\asteroids\RenderManager.cpp" />
+    <ClCompile Include="..\asteroids\shaders.cpp" />
+    <ClCompile Include="..\asteroids\ShellRenderer.cpp" />
+    <ClCompile Include="..\asteroids\Transformation.cpp" />
+    <ClCompile Include="gl_code.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6BB077AD-9701-4CE8-84F1-40CA5AE135E7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>mytest02</RootNamespace>
+    <ProjectName>asteroids</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GlesDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GlesRelease|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GlesDebug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='GlesRelease|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GlesDebug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(SolutionDir)\lib\;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\include\;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GlesRelease|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)\include;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>$(SolutionDir)\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GlesDebug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../es_emul;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>esUtil.lib;libEGL.lib;libGLESv2.lib;preprocessor.lib;translator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(SolutionDir)lib\libEGL.dll" "$(TargetDir)"
+xcopy /y "$(SolutionDir)lib\libGLESv2.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GlesRelease|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../es_emul</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>esUtil.lib;libEGL.lib;libGLESv2.lib;preprocessor.lib;translator.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
