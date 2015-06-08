@@ -36,11 +36,9 @@ void RendererComponent::onAdd()
 	_shaderProgram.addShaderToProgram(&_fragmentShader);
 
 	_shaderProgram.linkProgram();
-	//checkGlError("linkProgram");
 
 	// Get handle of mvp matrix to set location and roatation
 	_matrixHandle = glGetUniformLocation(_shaderProgram.getProgramID(), "MVP");
-	//checkGlError("glGetUniformLocation");
 
 	mPositionHandle = glGetAttribLocation(_shaderProgram.getProgramID(), "inPosition");
 }

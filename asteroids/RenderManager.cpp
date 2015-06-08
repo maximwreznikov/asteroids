@@ -34,7 +34,6 @@ void RenderManager::InitView(int width, int height)
 	Transformation::GWorldMatrix = _projection * CameraView;
 
 	glViewport(0, 0, _widthScreen, _heightScreen);
-	//checkGlError("glViewport");
 
 	// clear screen with color
 	glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
